@@ -41,12 +41,12 @@ qihu360_site_verification:
 # See: https://fontawesome.com/v4.7.0/icons/
 # If not set, "question-circle-o" icon will be shown.
 menu:
-  home: / || home
-  archives: /archives/ || folder-open
-  categories: /categories/ || th
-  tags: /tags/ || tags
-  reading: /reading/ || book
-  about: /about/ || user
+  home: /public/ || home
+  archives: /public//archives/ || folder-open
+  categories: /public/categories/ || th
+  tags: /public/tags/ || tags
+  reading: /public/reading/ || book
+  about: /public/about/ || user
   # xxx: /xxx/ || xxx
   # You can add a secondary menu like follow.
   # xxx: javascript:; || xxx
@@ -208,7 +208,7 @@ author:
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url: /images/avatar.png
+    url: /public/images/avatar.png
     # If true, the avatar would be displayed in a circle.
     rounded: false
     # The value should be chosen from 0 to 1.
