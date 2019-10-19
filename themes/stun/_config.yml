@@ -42,7 +42,7 @@ qihu360_site_verification:
 # If not set, "question-circle-o" icon will be shown.
 menu:
   home: /public/ || home
-  archives: /public//archives/ || folder-open
+  archives: /public/archives/ || folder-open
   categories: /public/categories/ || th
   tags: /public/tags/ || tags
   reading: /public/reading/ || book
@@ -69,8 +69,8 @@ menu_settings:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/icons/favicon-16x16.png
-  medium: /images/icons/favicon-32x32.png
+  small: /public/images/icons/favicon-16x16.png
+  medium: /public/images/icons/favicon-32x32.png
   # ! -----------------------------------------------------
   # ! If you don't understand, please ignore the following.
   # ! -----------------------------------------------------
