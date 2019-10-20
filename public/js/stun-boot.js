@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  Stun.utils.showThemeInConsole();
   CONFIG.shortcuts.switch_post && Stun.utils.registerHotkeyToSwitchPost();
 
   // Not reload this, because it's changeless.

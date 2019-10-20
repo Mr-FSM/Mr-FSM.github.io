@@ -45,7 +45,7 @@ menu:
   archives: /public/archives/ || folder-open
   categories: /public/categories/ || th
   tags: /public/tags/ || tags
-  reading: /public/reading/ || book
+  # reading: /public/reading/ || book
   about: /public/about/ || user
   # xxx: /xxx/ || xxx
   # You can add a secondary menu like follow.
@@ -388,9 +388,10 @@ gitalk:
   # Github repository.
   repo: Mr-FSM.github.io
   # Github Application Client ID.
-  client_id: 0681b997cff8ec89f7fd
+  client_id: cb37a23bb8fcfb7580af
   # Github Application Client Secret.
-  client_secret: c04ffaef0a9c0ce2764f7e888aa951bcf758384b
+  client_secret: 54b05f873b4aa80c68edefb369951131abee5aea
+ 
   # GitHub repo owner and collaborators, only these guys can initialize github issues.
   admin:
   # Facebook-like distraction free mode.
