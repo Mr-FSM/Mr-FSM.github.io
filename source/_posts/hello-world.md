@@ -2,7 +2,7 @@
 title: Hello World
 categories:
 - Diary
-reading:
+book:
 - 感悟
 ---
 
