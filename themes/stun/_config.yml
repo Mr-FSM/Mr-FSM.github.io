@@ -96,7 +96,7 @@ header:
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url: https://cdn.daddylab.com/Upload/image/20191021/1571627778205381.jpeg
+    url: https://cdn.daddylab.com/Upload/image/20191021/1571638176913704.jpeg
   # Mask effect of the background im
   mask:
     enable: false
