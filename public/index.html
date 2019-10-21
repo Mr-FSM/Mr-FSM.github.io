@@ -16,7 +16,43 @@ var CONFIG = {
   prompt: {"copy_success":"复制成功","copy_error":"复制失败","creative_commons":"知识共享","copy_button":"点击复制"}
 };
 
-window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav"><div class="header-nav-inner"><div class="header-nav-btn fa fa-bars"></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/public/"><i class="fa fa-home"></i>首页</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/public/archives/"><i class="fa fa-folder-open"></i>归档</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/public/categories/"><i class="fa fa-th"></i>分类</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/public/tags/"><i class="fa fa-tags"></i>标签</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/public/about/"><i class="fa fa-user"></i>关于</a></div></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="header-info-title">Mr.ming's blog</div><div class="header-info-subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home"><section class="post-list"><article class="post"><header class="post-header"><h1 class="post-header-title"><a class="post-header-title__a" href="/public/2019/10/20/js_scope/">引擎，编译器，作用域工作流程</a></h1><div class="post-header-meta"><span class="post-header-meta-create"><i class="fa fa-calendar-o"></i><span>发表于 </span><span>2019-10-20</span></span><span class="post-header-meta-update"><i class="fa fa-calendar-check-o"></i><span>更新于 </span><span>2019-10-20</span></span></div></header><div class="post-body"><div class="post-body-excerpt"><h2 id="引擎、编译器、作用域工作流程对话"><span class="heading-link">引擎、编译器、作用域工作流程对话</span></h2><img src="https://cdn.daddylab.com/Upload/image/20191020/1571578087983155.png" width="400" hegiht="250" align="center">
+window.CONFIG = CONFIG;</script></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav"><div class="header-nav-inner"><div class="header-nav-btn fa fa-bars"></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/public/"><i class="fa fa-home"></i>首页</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/public/archives/"><i class="fa fa-folder-open"></i>归档</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/public/categories/"><i class="fa fa-th"></i>分类</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/public/tags/"><i class="fa fa-tags"></i>标签</a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__a" href="/public/about/"><i class="fa fa-user"></i>关于</a></div></div></div></nav><div class="header-info"><div class="header-info-inner"><div class="header-info-title">Mr.ming's blog</div><div class="header-info-subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home"><section class="post-list"><article class="post"><header class="post-header"><h1 class="post-header-title"><a class="post-header-title__a" href="/public/2019/10/21/test/">test</a></h1><div class="post-header-meta"><span class="post-header-meta-create"><i class="fa fa-calendar-o"></i><span>发表于 </span><span>2019-10-21</span></span><span class="post-header-meta-update"><i class="fa fa-calendar-check-o"></i><span>更新于 </span><span>2019-10-21</span></span></div></header><div class="post-body"><div class="post-body-excerpt"><p>test拖拖拖</p>
+<!-- Gitalk 评论 start  -->
+
+<!-- Link Gitalk 的支持文件  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+<div id="gitalk-container"></div>     
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: `cb37a23bb8fcfb7580af`,
+        clientSecret: `54b05f873b4aa80c68edefb369951131abee5aea`,
+        repo: `Mr-FSM.github.io`,
+        owner: 'Mr-FSM',
+        admin: ['Mr-FSM'],
+        id: 'window.location.pathname'
+    });
+    gitalk.render('gitalk-container');
+</script> 
+<!-- Gitalk end --><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div></div></article><article class="post"><header class="post-header"><h1 class="post-header-title"><a class="post-header-title__a" href="/public/2019/10/21/js_scope/">引擎，编译器，作用域工作流程</a></h1><div class="post-header-meta"><span class="post-header-meta-create"><i class="fa fa-calendar-o"></i><span>发表于 </span><span>2019-10-21</span></span><span class="post-header-meta-update"><i class="fa fa-calendar-check-o"></i><span>更新于 </span><span>2019-10-21</span></span></div></header><div class="post-body"><div class="post-body-excerpt"><h2 id="引擎、编译器、作用域工作流程对话"><span class="heading-link">引擎、编译器、作用域工作流程对话</span></h2><img src="https://cdn.daddylab.com/Upload/image/20191020/1571578087983155.png" width="400" hegiht="250" align="center">
 
 
 <h2 id="编译器有话说"><span class="heading-link">编译器有话说</span></h2><img src="https://cdn.daddylab.com/Upload/image/20191020/1571578216645146.png" width="400" hegiht="250" align="center">
@@ -60,43 +96,7 @@ window.CONFIG = CONFIG;</script></head><body><div class="container" id="containe
             });
             document.body.appendChild(img);
           });
-      </script></div></div></article><article class="post"><header class="post-header"><h1 class="post-header-title"><a class="post-header-title__a" href="/public/2019/10/20/test/">test</a></h1><div class="post-header-meta"><span class="post-header-meta-create"><i class="fa fa-calendar-o"></i><span>发表于 </span><span>2019-10-20</span></span><span class="post-header-meta-update"><i class="fa fa-calendar-check-o"></i><span>更新于 </span><span>2019-10-20</span></span></div></header><div class="post-body"><div class="post-body-excerpt"><p>test拖拖拖</p>
-<!-- Gitalk 评论 start  -->
-
-<!-- Link Gitalk 的支持文件  -->
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
-<div id="gitalk-container"></div>     
-<script type="text/javascript">
-    var gitalk = new Gitalk({
-        clientID: `cb37a23bb8fcfb7580af`,
-        clientSecret: `54b05f873b4aa80c68edefb369951131abee5aea`,
-        repo: `Mr-FSM.github.io`,
-        owner: 'Mr-FSM',
-        admin: ['Mr-FSM'],
-        id: 'window.location.pathname'
-    });
-    gitalk.render('gitalk-container');
-</script> 
-<!-- Gitalk end --><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script></div></div></article><article class="post"><header class="post-header"><h1 class="post-header-title"><a class="post-header-title__a" href="/public/2019/10/19/hello-world/">Hello World</a></h1><div class="post-header-meta"><span class="post-header-meta-create"><i class="fa fa-calendar-o"></i><span>发表于 </span><span>2019-10-19</span></span><span class="post-header-meta-update"><i class="fa fa-calendar-check-o"></i><span>更新于 </span><span>2019-10-20</span></span></div></header><div class="post-body"><div class="post-body-excerpt"><p>Welcome to <span class="external-link"><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a><i class="fa fa-external-link"></i></span>! This is your very first post. Check <span class="external-link"><a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a><i class="fa fa-external-link"></i></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="external-link"><a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a><i class="fa fa-external-link"></i></span> or you can ask me on <span class="external-link"><a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a><i class="fa fa-external-link"></i></span>.</p>
+      </script></div></div></article><article class="post"><header class="post-header"><h1 class="post-header-title"><a class="post-header-title__a" href="/public/2019/10/21/hello-world/">Hello World</a></h1><div class="post-header-meta"><span class="post-header-meta-create"><i class="fa fa-calendar-o"></i><span>发表于 </span><span>2019-10-21</span></span><span class="post-header-meta-update"><i class="fa fa-calendar-check-o"></i><span>更新于 </span><span>2019-10-21</span></span></div></header><div class="post-body"><div class="post-body-excerpt"><p>Welcome to <span class="external-link"><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a><i class="fa fa-external-link"></i></span>! This is your very first post. Check <span class="external-link"><a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a><i class="fa fa-external-link"></i></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="external-link"><a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a><i class="fa fa-external-link"></i></span> or you can ask me on <span class="external-link"><a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a><i class="fa fa-external-link"></i></span>.</p>
 <h2 id="Quick-Start"><span class="heading-link">Quick Start</span></h2><h3 id="Create-a-new-post"><span class="heading-link">Create a new post</span></h3><figure class="highlight bash"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></div></figure>
 
 <p>More info: <span class="external-link"><a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a><i class="fa fa-external-link"></i></span></p>
