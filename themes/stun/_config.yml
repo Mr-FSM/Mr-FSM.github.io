@@ -96,7 +96,7 @@ header:
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url: https://cdn.daddylab.com/Upload/image/20191015/1571129655541731.png
+    url: https://cdn.daddylab.com/Upload/image/20191021/1571626763575448.jpeg
   # Mask effect of the background im
   mask:
     enable: false
@@ -391,7 +391,7 @@ gitalk:
   client_id: cb37a23bb8fcfb7580af
   # Github Application Client Secret.
   client_secret: 54b05f873b4aa80c68edefb369951131abee5aea
- 
+
   # GitHub repo owner and collaborators, only these guys can initialize github issues.
   admin:
   # Facebook-like distraction free mode.
