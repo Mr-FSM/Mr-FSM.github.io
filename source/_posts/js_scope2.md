@@ -32,3 +32,20 @@ var greet = function mrfsm(greet) {
 #### 函数表达式创建的函数是在运行时进行赋值，且要等到表达式赋值完成后才能调用
 
 #### 两种的声明可能导致变量在不同作用域，从而引起不同效果，不注意的情况下，可能会引起意想不到的 bug
+
+<!-- Link Gitalk 的支持文件  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+<div id="gitalk-container"></div>     
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+		clientID: `cb37a23bb8fcfb7580af`,
+		clientSecret: `54b05f873b4aa80c68edefb369951131abee5aea`,
+		repo: `Mr-FSM.github.io`,
+		owner: 'Mr-FSM',
+		admin: ['Mr-FSM'],
+		id: 'window.location.pathname'
+    });
+    gitalk.render('gitalk-container');
+</script> 
+<!-- Gitalk end -->
